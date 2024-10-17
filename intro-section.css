@@ -1,0 +1,249 @@
+body { 
+    background-color: hsl(0, 0%, 98%);
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+} 
+
+.navlinks { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+nav { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-evenly; 
+    width: 100%;
+    font-family: "Epilogue", sans-serif;
+}
+
+.logo { 
+    padding: 0 4.5rem 0 0;
+}
+
+nav > a { 
+    text-decoration: none; 
+    color: hsl(0, 0%, 8%);
+    padding: 15px;
+} 
+
+.signing-links { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-around;
+}
+
+.login { 
+    background-color: transparent; 
+    border: none;
+    font-family: "Epilogue", sans-serif;
+}
+
+.register {
+    padding: 0.5rem;
+    background-color: transparent; 
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/*body*/
+.content { 
+    margin-left: 2.5rem; 
+    margin-right: 1rem;
+}
+
+h1 { 
+    font-size: 3rem;
+    font-family: "Epilogue", sans-serif;
+}
+
+.description { 
+    max-width: 17rem;
+    font-size: 16px;
+    font-family: "Epilogue", sans-serif;
+    opacity: 0.6;
+    padding: 20px 20px 20px 0;
+}
+
+.learn-more { 
+    padding: 15px 20px;
+    font-family: "Epilogue", sans-serif; 
+    border: none; 
+    background-color: black; 
+    border-radius: 10px; 
+    color: white; 
+    font-size: 14px;
+    font-weight: bold; 
+}
+
+/*add hover classes*/
+
+.description-images { 
+    display: flex; 
+    align-items: center;  
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+
+.description-images > img { 
+   height: 15px; 
+   padding: 10px;
+}
+
+main { 
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-image { 
+    width: 40%;
+    height: 26.8rem;
+} 
+
+.main-image-mobile { 
+    display: none;
+}
+
+.features-menu { 
+    display: none;
+    position: absolute;
+    background-color: white;
+    font-family: "Epilogue", sans-serif;
+    width: 150px; 
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: left;
+    padding: 10px 10px 10px 25px;
+    top: 3.7rem;
+    left: 6rem;
+    animation: appear 1s 1 ease-in;
+}
+
+.company-menu { 
+    display: none;
+    position: absolute;
+    background-color: white;
+    font-family: "Epilogue", sans-serif;
+    width: 150px; 
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: left;
+    padding: 10px 10px 10px 25px;
+    top: 3.7rem;
+    left: 15rem;
+    animation: appear 1s 1 ease-in;
+}
+
+.company-menu > p > button { 
+    padding: 10px; 
+    text-decoration: none; 
+    color: black; 
+    font-family: "Epilogue", sans-serif;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+}
+
+.features-menu > p > img { 
+    padding-right: 10px;
+}  
+
+.menu-logo { 
+    display: none;
+} 
+
+.mobile-nav { 
+    display: none;
+}
+
+@keyframes appear { 
+    0% { 
+        transform: translateY(-0.8rem);
+        opacity: 0;
+    }
+}
+
+@keyframes flipper {
+    0% { 
+         transform: rotate(0);
+    }
+
+    100% { 
+        transform: rotate(180deg);
+    }
+} 
+
+@keyframes slipdown {
+    100% { 
+        transform: translateY(2.5rem);
+        animation-play-state: paused;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-image, nav, .signing-links { 
+        display: none;
+    } 
+
+    .main-image-mobile { 
+        display: block; 
+        width: 100%;
+    }
+
+    main { 
+        display: block;
+        width: 100%;
+        margin: 0; 
+        padding: 0;
+    } 
+
+    .menu-logo { 
+        display: block;
+    }
+
+    .mobile-nav { 
+        display: none; 
+        position: absolute; 
+        background-color: white; 
+        height: 150%; 
+        width: 50%; 
+        top: 0; 
+        right: 0;
+    }  
+
+    .signin { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px; 
+        padding-top: 20px;
+    }
+
+    .signin > button{ 
+        display: block; 
+        margin-right: 25px;
+        margin-left: 25px; 
+        padding: 12px; 
+        border-radius: 15px;
+    }
+
+    .close-menu { 
+        text-align: right;
+        padding: 10px;
+    }
+
+    .menu-links { 
+        padding-top: 1.5rem;
+    }
+
+    .menu-links > a { 
+        display: block; 
+        padding-left: 1rem; 
+        padding-top: 2rem;
+        text-decoration: none; 
+        color: hsl(0, 0%, 8%);
+    } 
+}
